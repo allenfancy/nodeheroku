@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><%=title%></title>
+
+</head>
+<body>
+<%- include userCenterHeader.html %>
+		
+
+	<div class="row">
+	
+		<div class="">
+				 
+                <%for(var i in travelnotes){ if(!travelnotes[i].title)continue;%>
+                        <div class="" >
+                        	<a><img src="<%-travelnotes[i].cover_Image%>" ></a>
+                            <a ><%=travelnotes[i].title%></a>
+                            <a class="btn btn-success" style="width: 120px;" target="_blank"  href="/showDetail/<%=travelnotes[i]._id%>">查看</a>
+                        </div>
+                    
+                <%}%>
+          
+		</div>
+	</div>
+	<%- include footer.html %>
+
+</body>
+</html>
